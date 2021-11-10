@@ -1,11 +1,14 @@
 import React from 'react';
 import { Container, Nav, Navbar, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import useAuth from '../../hooks/useAuth';
 import headerimage from '../../images/drone/b1.webp'
 
 import './Header.css';
 
 const Header = () => {
+
+    const { user, logout } = useAuth();
     return (
         <div>
             <h1> This is Header</h1>
@@ -18,6 +21,11 @@ const Header = () => {
 
                         <Link className="m-2 text-decoration-none text-light" to="/products">All Products</Link>
                         <Link className="m-2 text-decoration-none text-light" to="/dashboard">Dashboard</Link>
+                        {/* <Link className="m-2 text-decoration-none text-light" to="/login">Login</Link> */}
+                        {
+                            user?.email ? (<Button onClick={logout} className="bg-info "><Link className="m-2 text-decoration-none text-white" to="/home">Logout</Link> </Button>)
+                                : (<Link className="m-2 text-decoration-none text-light" to="/login">Login</Link>)
+                        }
 
                     </Nav>
                 </Container>
