@@ -1,0 +1,16 @@
+.add-product{
+    margin: 5px 5px;
+    padding: 10px;
+    /* height: 10vh; */
+}
+.add-product form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.add-product form input, textarea{
+    width: 60%;
+    /* height: 10vh; */
+    margin-bottom: 10px;
+}
