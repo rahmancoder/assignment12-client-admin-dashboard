@@ -64,7 +64,7 @@ const Register = () => {
                             onBlur={handleOnBlur}
                             variant="standard" />
 
-                        <Button sx={{ width: '75%', m: 1 }} type="submit" variant="contained">Register</Button>
+                        <Button sx={{ width: '75%', m: 1 }} type="submit" variant="contained" color="secondary">Register</Button>
                         <NavLink
                             style={{ textDecoration: 'none' }}
                             to="/login">

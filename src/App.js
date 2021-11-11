@@ -9,6 +9,7 @@ import Footer from './Components/Footer/Footer';
 import Login from './Components/Login/Login';
 import AuthProvider from './Context/AuthProvider';
 import Register from './Components/Register/Register';
+import DashBoard from './Components/DashBoard/DashBoard';
 
 function App() {
   return (
@@ -26,6 +27,9 @@ function App() {
             </Route>
             <Route path="/products">
 
+            </Route>
+            <Route path="/dashboard">
+              <DashBoard></DashBoard>
             </Route>
             <Route path="/login">
               <Login></Login>

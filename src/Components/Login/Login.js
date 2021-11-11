@@ -57,7 +57,7 @@ const Login = () => {
                                 onChange={handleOnChange}
                                 variant="standard" />
 
-                            <Button sx={{ width: '75%', m: 1 }} type="submit" variant="contained">Login</Button>
+                            <Button sx={{ width: '75%', m: 1 }} type="submit" variant="contained" color="secondary">Login</Button>
                             <NavLink
                                 style={{ textDecoration: 'none' }}
                                 to="/register">
@@ -68,7 +68,7 @@ const Login = () => {
                             {authError && <Alert severity="error">{authError}</Alert>}
                         </form>
                         <p>------------------------</p>
-                        <Button onClick={handleGoogleSignIn} variant="contained">Google Sign In</Button>
+                        <Button onClick={handleGoogleSignIn} variant="contained" color="success">Google Sign In</Button>
                     </Grid>
                     <Grid item xs={12} md={6}>
                         <img style={{ width: '100%' }} src={loginimage} alt="" />
