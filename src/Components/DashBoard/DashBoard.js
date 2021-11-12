@@ -35,14 +35,16 @@ function DashBoard(props) {
     const { window } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
     let { path, url } = useRouteMatch();
-    const { admin, logout } = useAuth();
+    const { user, admin, logout } = useAuth();
     const handleDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
     };
 
     const drawer = (
         <div>
+
             <Toolbar />
+            {/* <img className="" src={user?.photo} alt="" /> */}
             <Divider />
             {/* <Link to="/home"><Button color="inherit">Appointment</Button></Link> */}
             <Link to={`${url}`}><Button color="inherit">Dashboard</Button></Link>
