@@ -19,7 +19,7 @@ const Header = () => {
                     <Nav className="me-5 p-2 text-center">
                         <Button className="bg-warning"><Link className="m-2 text-decoration-none" to="/home">Home</Link> </Button>
 
-                        <Link className="m-2 text-decoration-none text-light" to="/products">All Products</Link>
+                        <Link className="m-2 text-decoration-none text-light" to="/allproducts">All Products</Link>
                         <Link className="m-2 text-decoration-none text-light" to="/dashboard">Dashboard</Link>
                         {/* <Link className="m-2 text-decoration-none text-light" to="/login">Login</Link> */}
                         {

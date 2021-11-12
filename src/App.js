@@ -10,6 +10,9 @@ import Login from './Components/Login/Login';
 import AuthProvider from './Context/AuthProvider';
 import Register from './Components/Register/Register';
 import DashBoard from './Components/DashBoard/DashBoard';
+import ProductList from './Components/ProductList/ProductList';
+import SingleProductListInfo from './Components/SingleProductListInfo/SingleProductListInfo';
+import ExploreProductList from './Components/ExploreProductList/ExploreProductList';
 
 function App() {
   return (
@@ -26,7 +29,14 @@ function App() {
 
             </Route>
             <Route path="/products">
+              <ProductList></ProductList>
+            </Route>
+            <Route path="/allproducts">
+              <ExploreProductList></ExploreProductList>
+            </Route>
 
+            <Route path="/productorder/:productId">
+              <SingleProductListInfo></SingleProductListInfo>
             </Route>
             <Route path="/dashboard">
               <DashBoard></DashBoard>

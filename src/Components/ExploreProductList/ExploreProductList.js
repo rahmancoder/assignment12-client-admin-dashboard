@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import SingleProductList from '../SingleProductList/SingleProductList';
 
-const ProductList = () => {
-
+const ExploreProductList = () => {
     const [productlist, setAllproductlist] = useState([]);
     useEffect(() => {
         // fetch('./mustafiztravel.json')
@@ -13,6 +12,7 @@ const ProductList = () => {
             .then(data => setAllproductlist(data));
 
     }, [])
+
 
     return (
         <div className="text-center container mt-4">
@@ -25,7 +25,7 @@ const ProductList = () => {
 
                     {
                         // travellist.slice(0, 9).map(travel =>
-                        productlist.slice(0, 6).map(product =>
+                        productlist.map(product =>
                             <SingleProductList
                                 key={product.index}
                                 product={product}
@@ -43,4 +43,4 @@ const ProductList = () => {
     );
 };
 
-export default ProductList;
+export default ExploreProductList;
