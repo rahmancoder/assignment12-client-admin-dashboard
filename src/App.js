@@ -14,6 +14,7 @@ import ProductList from './Components/ProductList/ProductList';
 import SingleProductListInfo from './Components/SingleProductListInfo/SingleProductListInfo';
 import ExploreProductList from './Components/ExploreProductList/ExploreProductList';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import ConfirmOrder from './Components/ConfirmOrder/ConfirmOrder';
 
 function App() {
   return (
@@ -38,6 +39,11 @@ function App() {
 
             <Route path="/productorder/:productId">
               <SingleProductListInfo></SingleProductListInfo>
+            </Route>
+
+            <Route path="/confirmorders">
+              <ConfirmOrder></ConfirmOrder>
+
             </Route>
 
             {/* <PrivateRoute path="/productorder/:productId">
