@@ -102,16 +102,16 @@ const useFirebase = () => {
     }
 
     const saveUser = (email, displayName, method) => {
-        // const user = { email, displayName };
-        //fetch('http://localhost:5000/users', {
-        // fetch('https://stark-caverns-04377.herokuapp.com/users', {
-        //     method: method,
-        //     headers: {
-        //         'content-type': 'application/json'
-        //     },
-        //     body: JSON.stringify(user)
-        // })
-        //     .then()
+        const user = { email, displayName };
+        fetch('http://localhost:5000/users', {
+            // fetch('https://stark-caverns-04377.herokuapp.com/users', {
+            method: method,
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        })
+            .then()
     }
 
     return {
