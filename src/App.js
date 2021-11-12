@@ -13,6 +13,7 @@ import DashBoard from './Components/DashBoard/DashBoard';
 import ProductList from './Components/ProductList/ProductList';
 import SingleProductListInfo from './Components/SingleProductListInfo/SingleProductListInfo';
 import ExploreProductList from './Components/ExploreProductList/ExploreProductList';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
@@ -38,6 +39,11 @@ function App() {
             <Route path="/productorder/:productId">
               <SingleProductListInfo></SingleProductListInfo>
             </Route>
+
+            {/* <PrivateRoute path="/productorder/:productId">
+              <SingleProductListInfo></SingleProductListInfo>
+            </PrivateRoute> */}
+
             <Route path="/dashboard">
               <DashBoard></DashBoard>
             </Route>

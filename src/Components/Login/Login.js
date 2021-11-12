@@ -9,6 +9,8 @@ import loginimage from '../../images/Loginimage/Loginimage.jpg'
 
 const Login = () => {
 
+    // const redirect_uri = location.state?.from || '/home';
+
     const [loginData, setLoginData] = useState({});
     const { user, loginUser, signInWithGoogle, isLoading, authError } = useAuth();
 
@@ -29,6 +31,9 @@ const Login = () => {
 
     const handleGoogleSignIn = () => {
         signInWithGoogle(location, history)
+        // .then(result => {
+        //     history.push(redirect_uri);
+        // })
     }
 
 
