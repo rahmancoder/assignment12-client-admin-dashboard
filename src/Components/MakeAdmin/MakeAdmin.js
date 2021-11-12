@@ -32,14 +32,38 @@ const MakeAdmin = () => {
     // }
 
 
+
+    const handleAdminSubmit = e => {
+        const user = { email };
+        fetch('http://localhost:5000/users/admin', {
+            //fetch('https://stark-caverns-04377.herokuapp.com/users/admin', {
+            method: 'PUT',
+            headers: {
+                // 'authorization': `Bearer ${token}`,
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.modifiedCount) {
+                    console.log(data);
+                    setSuccess(true);
+                }
+            })
+
+        e.preventDefault()
+    }
+
+
     return (
         <div>
             <h1>This is makeadmin page make a admin with email and a button  with the help of database</h1>
             <div>
                 <h2>Make an Admin</h2>
-                {/* <form onSubmit={handleAdminSubmit}>
-                 */}
-                <form>
+                <form onSubmit={handleAdminSubmit}>
+
+                    {/* <form> */}
                     <TextField
                         sx={{ width: '50%' }}
                         label="Email"

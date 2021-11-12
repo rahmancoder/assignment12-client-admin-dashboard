@@ -13,14 +13,14 @@ const AddProducts = () => {
     const onSubmit = data => {
         console.log(data);
 
-        // axios.post('http://localhost:5000/blog', data)
-        // axios.post('https://frightening-spell-88460.herokuapp.com/travel', data)
-        //     .then(res => {
-        //         if (res.data.insertedId) {
-        //             alert('added successfully');
-        //             reset();
-        //         }
-        //     })
+        axios.post('http://localhost:5000/products', data)
+            // axios.post('https://frightening-spell-88460.herokuapp.com/travel', data)
+            .then(res => {
+                if (res.data.insertedId) {
+                    alert('added successfully');
+                    reset();
+                }
+            })
     }
 
     return (
@@ -31,12 +31,12 @@ const AddProducts = () => {
             <div className="add-product">
                 <h2 className="text-danger">Please Add a New Product List</h2>
                 <form onSubmit={handleSubmit(onSubmit)}>
-                    <input style={{ height: '10vh' }} {...register("Travel_destination", { required: true, maxLength: 20 })} placeholder="Add Drone Product" />
-                    <textarea style={{ height: '10vh' }} {...register("travel_description")} placeholder="Product Descripsion" />
-                    <input style={{ height: '5vh' }} type="number" {...register("travel_cost")} placeholder="Product Cost" />
+                    <input style={{ height: '10vh' }} {...register("product_Name", { required: true, maxLength: 20 })} placeholder="Add Drone Product Name" />
+                    <textarea style={{ height: '10vh' }} {...register("product_description")} placeholder="Product Descripsion" />
+                    <input style={{ height: '5vh' }} type="number" {...register("product_cost")} placeholder="Product Cost" />
                     <input style={{ height: '5vh' }} {...register("picture")} placeholder="Product image url" />
-                    <input style={{ height: '5vh' }} type="number"{...register("index")} placeholder="Destination image url" defaultValue="10" />
-                    <input style={{ height: '5vh' }} {...register("status")} placeholder="Destination image url" defaultValue="pending" />
+                    <input style={{ height: '5vh' }} type="number"{...register("index")} placeholder="Product image url" defaultValue="10" />
+                    <input style={{ height: '5vh' }} {...register("status")} defaultValue="pending" />
                     <input type="submit" />
                 </form>
             </div>

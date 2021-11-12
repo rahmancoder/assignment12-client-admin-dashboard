@@ -73,10 +73,10 @@ const useFirebase = () => {
         const unsubscribed = onAuthStateChanged(auth, (user) => {
             if (user) {
                 setUser(user);
-                getIdToken(user)
-                    .then(idToken => {
-                        setToken(idToken);
-                    })
+                // getIdToken(user)
+                //     .then(idToken => {
+                //         setToken(idToken);
+                //     })
             } else {
                 setUser({})
             }
@@ -103,6 +103,7 @@ const useFirebase = () => {
 
     const saveUser = (email, displayName, method) => {
         // const user = { email, displayName };
+        //fetch('http://localhost:5000/users', {
         // fetch('https://stark-caverns-04377.herokuapp.com/users', {
         //     method: method,
         //     headers: {
