@@ -25,6 +25,7 @@ import DashBoardHome from '../DashBoardHome/DashBoardHome';
 import AddReviews from '../AddReviews/AddReviews';
 import Payment from '../Payment/Payment';
 import ManageAllOrders from '../MangeAllOrders/ManageAllOrders';
+import MyOrders from '../MyOrders/MyOrders';
 
 
 const drawerWidth = 200;
@@ -134,6 +135,9 @@ function DashBoard(props) {
                     </Route>
                     <Route path={`${path}/pay`}>
                         <Payment></Payment>
+                    </Route>
+                    <Route path={`${path}/myorders`}>
+                        <MyOrders></MyOrders>
                     </Route>
                     <Route path={`${path}/myreview`}>
                         <AddReviews></AddReviews>

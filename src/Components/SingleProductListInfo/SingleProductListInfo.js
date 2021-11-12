@@ -85,7 +85,7 @@ const SingleProductListInfo = () => {
                     <input style={{ height: '10vh' }} {...register("OrderName", { required: true })} defaultValue={productdetails[productId]?.product_Name} />
                     <textarea style={{ height: '10vh' }} {...register("description")} placeholder="Product Description" />
                     <input style={{ height: '5vh' }}  {...register("price")} defaultValue={productdetails[productId]?.product_cost} />
-                    <input style={{ height: '5vh' }} {...register("userEmail")} placeholder="User Email" defaultValue={user?.email} />
+                    <input style={{ height: '5vh' }} {...register("email")} placeholder="User Email" defaultValue={user?.email} />
                     <input className="bg-success text-light" type="submit" />
                 </form>
             </div>
