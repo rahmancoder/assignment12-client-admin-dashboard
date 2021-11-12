@@ -24,6 +24,7 @@ import useAuth from '../../hooks/useAuth';
 import DashBoardHome from '../DashBoardHome/DashBoardHome';
 import AddReviews from '../AddReviews/AddReviews';
 import Payment from '../Payment/Payment';
+import ManageAllOrders from '../MangeAllOrders/ManageAllOrders';
 
 
 const drawerWidth = 200;
@@ -49,12 +50,16 @@ function DashBoard(props) {
             <Link to={`${url}/myreview`}><Button color="inherit">Reviews</Button></Link>
             <Link to="/login"><Button onClick={logout} color="inherit">Logout</Button></Link>
             <Link to={`${url}/addproducts`}><Button color="inherit">Add a Product</Button></Link>
-            {/* {admin && <Box>
-                <Link to={`${url}/makeAdmin`}><Button color="inherit">Make Admin</Button></Link>
-                <Link to={`${url}/addDoctor`}><Button color="inherit">Add Doctor</Button></Link>
-            </Box>} */}
-            <Link to={`${url}/makeadmin`}><Button color="inherit">Make Admin</Button></Link>
+            {admin && <Box>
+                <Link to={`${url}/addproducts`}><Button color="inherit">Add a Product</Button></Link>
+                <Link to={`${url}/makeadmin`}><Button color="inherit">Make Admin</Button></Link>
+                <Link to={`${url}/manageallproducts`}><Button color="inherit">Manage  all Product</Button></Link>
+                <Link to={`${url}/manageallorders`}><Button color="inherit">Manage  all Orders</Button></Link>
+
+            </Box>}
+            {/* <Link to={`${url}/makeadmin`}><Button color="inherit">Make Admin</Button></Link>
             <Link to={`${url}/manageallproducts`}><Button color="inherit">Manage  all Product</Button></Link>
+            <Link to={`${url}/manageallorders`}><Button color="inherit">Manage  all Orders</Button></Link> */}
 
         </div>
     );
@@ -140,8 +145,11 @@ function DashBoard(props) {
                     <Route path={`${path}/makeadmin`}>
                         <MakeAdmin></MakeAdmin>
                     </Route>
-                    <Route path={`${path}/manageallproduct`}>
+                    <Route path={`${path}/manageallproducts`}>
                         <ManageAllProduct></ManageAllProduct>
+                    </Route>
+                    <Route path={`${path}/manageallorders`}>
+                        <ManageAllOrders></ManageAllOrders>
                     </Route>
                     {/* <AdminRoute path={`${path}/makeadmin`}>
                         <MakeAdmin></MakeAdmin>
