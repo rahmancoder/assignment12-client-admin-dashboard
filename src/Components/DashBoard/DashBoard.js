@@ -50,16 +50,16 @@ function DashBoard(props) {
             <Link to={`${url}/myreview`}><Button color="inherit">Reviews</Button></Link>
             <Link to="/login"><Button onClick={logout} color="inherit">Logout</Button></Link>
             <Link to={`${url}/addproducts`}><Button color="inherit">Add a Product</Button></Link>
-            {/* {admin && <Box>
+            {admin && <Box>
                 <Link to={`${url}/addproducts`}><Button color="inherit">Add a Product</Button></Link>
                 <Link to={`${url}/makeadmin`}><Button color="inherit">Make Admin</Button></Link>
                 <Link to={`${url}/manageallproducts`}><Button color="inherit">Manage  all Product</Button></Link>
                 <Link to={`${url}/manageallorders`}><Button color="inherit">Manage  all Orders</Button></Link>
 
-            </Box>} */}
-            <Link to={`${url}/makeadmin`}><Button color="inherit">Make Admin</Button></Link>
+            </Box>}
+            {/* <Link to={`${url}/makeadmin`}><Button color="inherit">Make Admin</Button></Link>
             <Link to={`${url}/manageallproducts`}><Button color="inherit">Manage  all Product</Button></Link>
-            <Link to={`${url}/manageallorders`}><Button color="inherit">Manage  all Orders</Button></Link>
+            <Link to={`${url}/manageallorders`}><Button color="inherit">Manage  all Orders</Button></Link> */}
 
         </div>
     );
