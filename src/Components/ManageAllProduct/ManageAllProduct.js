@@ -8,8 +8,8 @@ const ManageAllProduct = () => {
     const [adminproducts, setAdminproducts] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:5000/products")
-            // fetch("https://frightening-spell-88460.herokuapp.com/booking")
+        // fetch("http://localhost:5000/products")
+        fetch("https://sheltered-shelf-37326.herokuapp.com/products")
             .then((res) => res.json())
             .then((data) => setManageallproducts(data));
 
@@ -21,8 +21,8 @@ const ManageAllProduct = () => {
     const handleDeleteOrder = id => {
         const proceed = window.confirm('Are you sure, you want to delete?');
         if (proceed) {
-            const url = `http://localhost:5000/products/${id}`;
-            // const url = `http://localhost:5000/mybooking/${id}`;
+            // const url = `http://localhost:5000/products/${id}`;
+            const url = `https://sheltered-shelf-37326.herokuapp.com/products/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

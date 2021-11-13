@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Nav, Navbar, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
-import headerimage from '../../images/drone/b1.webp'
+
 
 import './Header.css';
 
@@ -21,6 +21,8 @@ const Header = () => {
 
                         <Link className="m-2 text-decoration-none text-light" to="/allproducts">All Products</Link>
                         <Link className="m-2 text-decoration-none text-light" to="/dashboard">Dashboard</Link>
+                        <Link className="m-2 text-decoration-none text-light" to="/questions">FAQ</Link>
+                        <Link className="m-2 text-decoration-none text-light" to="/allreviews">User Reviews</Link>
                         {/* <Link className="m-2 text-decoration-none text-light" to="/login">Login</Link> */}
 
 

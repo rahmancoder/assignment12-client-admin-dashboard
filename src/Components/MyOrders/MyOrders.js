@@ -11,8 +11,8 @@ const MyOrders = () => {
     const [myallorders, setMyallorders] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:5000/orders")
-            // fetch("https://frightening-spell-88460.herokuapp.com/booking")
+        // fetch("http://localhost:5000/orders")
+        fetch("https://sheltered-shelf-37326.herokuapp.com/orders")
             .then((res) => res.json())
             .then((data) => setMyallorders(data));
         // .then((data) => {
@@ -26,7 +26,8 @@ const MyOrders = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/orders?email=${user.email}`)
+        // fetch(`http://localhost:5000/orders?email=${user.email}`)
+        fetch(`https://sheltered-shelf-37326.herokuapp.com/orders?email=${user.email}`)
             .then(res => res.json())
             .then(data => setOrders(data));
     }, [])
@@ -37,8 +38,8 @@ const MyOrders = () => {
     const handleDeleteOrder = id => {
         const proceed = window.confirm('Are you sure, you want to delete?');
         if (proceed) {
-            const url = `http://localhost:5000/orders/${id}`;
-            // const url = `http://localhost:5000/mybooking/${id}`;
+            // const url = `http://localhost:5000/orders/${id}`;
+            const url = `https://sheltered-shelf-37326.herokuapp.com/orders/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

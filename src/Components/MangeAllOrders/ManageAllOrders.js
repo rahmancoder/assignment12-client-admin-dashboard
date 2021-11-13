@@ -4,14 +4,17 @@ import { Button, Table } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 
 const ManageAllOrders = () => {
+
+    // const { register } = useForm();
+
     const [manageallorders, setManageallorders] = useState([]);
 
 
-    const [orderId, setOrderId] = useState("");
+    // const [orderId, setOrderId] = useState("");
 
     useEffect(() => {
-        fetch("http://localhost:5000/orders")
-            // fetch("https://frightening-spell-88460.herokuapp.com/booking")
+        // fetch("http://localhost:5000/orders")
+        fetch("https://sheltered-shelf-37326.herokuapp.com/orders")
             .then((res) => res.json())
             .then((data) => setManageallorders(data));
 
@@ -20,21 +23,22 @@ const ManageAllOrders = () => {
 
 
     // const status = "apporved";
-    const handleOrderId = (id) => {
-        setOrderId(id);
-        console.log(id);
-    };
+    // const handleOrderId = (id) => {
+    //     setOrderId(id);
+    //     console.log(id);
+    // };
 
-    const onSubmit = (data) => {
-        console.log(data, orderId);
-        fetch(`http://localhost:5000/statusupdate/${orderId}`, {
-            method: "PUT",
-            headers: { "content-type": "application/json" },
-            body: JSON.stringify(data),
-        })
-            .then((res) => res.json())
-            .then((result) => console.log(result));
-    };
+    // const onSubmit = (data) => {
+    //     console.log(data, orderId);
+    //     // fetch(`http://localhost:5000/statusupdate/${orderId}`, {
+    //     fetch(`https://sheltered-shelf-37326.herokuapp.com/statusupdate/${orderId}`, {
+    //         method: "PUT",
+    //         headers: { "content-type": "application/json" },
+    //         body: JSON.stringify(data),
+    //     })
+    //         .then((res) => res.json())
+    //         .then((result) => console.log(result));
+    // };
 
 
 

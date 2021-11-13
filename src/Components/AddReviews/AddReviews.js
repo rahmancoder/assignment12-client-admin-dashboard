@@ -12,8 +12,8 @@ const AddReviews = () => {
     const onSubmit = data => {
         console.log(data);
 
-        axios.post('http://localhost:5000/allreviews', data)
-            // axios.post('https://frightening-spell-88460.herokuapp.com/reviews', data)
+        // axios.post('http://localhost:5000/allreviews', data)
+        axios.post('https://sheltered-shelf-37326.herokuapp.com/allreviews', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('added successfully');

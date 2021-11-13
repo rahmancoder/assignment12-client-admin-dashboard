@@ -49,7 +49,7 @@ const SingleReviewList = (props) => {
                     {description}
                 </Typography>
             </CardContent>
-            <Rating name="half-rating" defaultValue={2.5} precision={0.5} />
+            <Rating name="half-rating" defaultValue={2.5} precision={0.5} readOnly />
             <CardActions>
                 <Button size="small">Share</Button>
                 <Button size="small">Learn More</Button>

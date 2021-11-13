@@ -13,8 +13,8 @@ const AddProducts = () => {
     const onSubmit = data => {
         console.log(data);
 
-        axios.post('http://localhost:5000/products', data)
-            // axios.post('https://frightening-spell-88460.herokuapp.com/travel', data)
+        // axios.post('http://localhost:5000/products', data)
+        axios.post('https://sheltered-shelf-37326.herokuapp.com/products', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('added successfully');

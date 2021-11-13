@@ -16,6 +16,7 @@ import ExploreProductList from './Components/ExploreProductList/ExploreProductLi
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import ConfirmOrder from './Components/ConfirmOrder/ConfirmOrder';
 import AllReviewList from './Components/AllReviewList/AllReviewList';
+import FAQ from './Components/FAQ/FAQ';
 
 function App() {
   return (
@@ -38,6 +39,10 @@ function App() {
               <ExploreProductList></ExploreProductList>
             </Route>
 
+            <Route path="/questions">
+              <FAQ></FAQ>
+            </Route>
+
             {/* <Route path="/productorder/:productId">
               <SingleProductListInfo></SingleProductListInfo>
             </Route> */}
@@ -57,9 +62,13 @@ function App() {
 
             </Route>
 
-            <Route path="/dashboard">
+            {/* <Route path="/dashboard">
               <DashBoard></DashBoard>
-            </Route>
+            </Route> */}
+            <PrivateRoute path="/dashboard">
+              <DashBoard></DashBoard>
+            </PrivateRoute>
+
             <Route path="/login">
               <Login></Login>
             </Route>

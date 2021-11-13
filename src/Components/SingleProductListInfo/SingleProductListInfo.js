@@ -16,9 +16,9 @@ const SingleProductListInfo = () => {
     const onSubmit = data => {
         console.log(data);
 
-        // axios.post('/mustafiztravel.json', data)
-        axios.post('http://localhost:5000/orders', data)
-            // axios.post('https://frightening-spell-88460.herokuapp.com/booking', data)
+        // axios.post('/mustafizorders.json', data)
+        // axios.post('http://localhost:5000/orders', data)
+        axios.post('https://sheltered-shelf-37326.herokuapp.com/orders', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert(' Order added successfully');
@@ -31,9 +31,8 @@ const SingleProductListInfo = () => {
     const [productdetails, setProductDetails] = useState([]);
 
     useEffect(() => {
-        // fetch('/mustafiztravel.json')
-        fetch('http://localhost:5000/products')
-            // fetch('https://frightening-spell-88460.herokuapp.com/travel')
+        // fetch('http://localhost:5000/products')
+        fetch('https://sheltered-shelf-37326.herokuapp.com/products')
             .then(res => res.json())
             // .then(data => console.log(data))
             .then(data => setProductDetails(data))

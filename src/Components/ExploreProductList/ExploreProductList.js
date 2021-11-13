@@ -4,9 +4,9 @@ import SingleProductList from '../SingleProductList/SingleProductList';
 const ExploreProductList = () => {
     const [productlist, setAllproductlist] = useState([]);
     useEffect(() => {
-        // fetch('./mustafiztravel.json')
-        fetch('http://localhost:5000/products')
-            // fetch('https://frightening-spell-88460.herokuapp.com/travel')
+
+        // fetch('http://localhost:5000/products')
+        fetch('https://sheltered-shelf-37326.herokuapp.com/products')
             .then(res => res.json())
             // .then(data => console.log(data));
             .then(data => setAllproductlist(data));

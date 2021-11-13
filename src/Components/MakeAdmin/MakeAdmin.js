@@ -16,8 +16,8 @@ const MakeAdmin = () => {
 
     const handleAdminSubmit = e => {
         const user = { email };
-        fetch('http://localhost:5000/users/admin', {
-            //fetch('https://stark-caverns-04377.herokuapp.com/users/admin', {
+        // fetch('http://localhost:5000/users/admin', {
+        fetch('https://sheltered-shelf-37326.herokuapp.com/users/admin', {
             method: 'PUT',
             headers: {
                 // 'authorization': `Bearer ${token}`,
@@ -39,7 +39,7 @@ const MakeAdmin = () => {
 
     return (
         <div>
-            <h1>This is makeadmin page make a admin with email and a button  with the help of database</h1>
+            <h1> Make a user Admin here</h1>
             <div>
                 <h2>Make an Admin</h2>
                 <form onSubmit={handleAdminSubmit}>
