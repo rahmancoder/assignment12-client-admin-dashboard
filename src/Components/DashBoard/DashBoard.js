@@ -28,6 +28,8 @@ import ManageAllOrders from '../MangeAllOrders/ManageAllOrders';
 import MyOrders from '../MyOrders/MyOrders';
 import AdminRoute from '../AdminRoute/AdminRoute';
 
+import LogoutIcon from '@mui/icons-material/Logout';
+
 
 const drawerWidth = 200;
 
@@ -45,6 +47,14 @@ function DashBoard(props) {
 
             <Toolbar />
             {/* <img className="" src={user?.photo} alt="" /> */}
+            {
+                user?.email &&
+
+                <Typography variant="h5" gutterBottom component="div">
+                    {user.displayName}
+                </Typography>
+
+            }
             <Divider />
             {/* <Link to="/home"><Button color="inherit">Appointment</Button></Link> */}
 
@@ -74,7 +84,7 @@ function DashBoard(props) {
                 </Box>
             }
 
-            <Link to="/login"><Button onClick={logout} color="inherit">Logout</Button></Link>
+            <LogoutIcon /> <Link to="/login"><Button onClick={logout} color="inherit">Logout</Button></Link>
             {/* <Link to={`${url}/makeadmin`}><Button color="inherit">Make Admin</Button></Link>
             <Link to={`${url}/manageallproducts`}><Button color="inherit">Manage  all Product</Button></Link>
             <Link to={`${url}/manageallorders`}><Button color="inherit">Manage  all Orders</Button></Link> */}

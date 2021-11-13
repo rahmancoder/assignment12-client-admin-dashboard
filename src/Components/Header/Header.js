@@ -22,6 +22,16 @@ const Header = () => {
                         <Link className="m-2 text-decoration-none text-light" to="/allproducts">All Products</Link>
                         <Link className="m-2 text-decoration-none text-light" to="/dashboard">Dashboard</Link>
                         {/* <Link className="m-2 text-decoration-none text-light" to="/login">Login</Link> */}
+
+
+                        {
+                            user?.email && <Link className="m-2 text-decoration-none text-light" to="/">
+                                <li className="header-items">
+                                    {user.displayName}
+                                </li>
+                            </Link>
+                        }
+
                         {
                             user?.email ? (<Button onClick={logout} className="bg-info "><Link className="m-2 text-decoration-none text-white" to="/home">Logout</Link> </Button>)
                                 : (<Link className="m-2 text-decoration-none text-light" to="/login">Login</Link>)
