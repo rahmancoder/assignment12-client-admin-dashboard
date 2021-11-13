@@ -15,6 +15,7 @@ import SingleProductListInfo from './Components/SingleProductListInfo/SingleProd
 import ExploreProductList from './Components/ExploreProductList/ExploreProductList';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import ConfirmOrder from './Components/ConfirmOrder/ConfirmOrder';
+import AllReviewList from './Components/AllReviewList/AllReviewList';
 
 function App() {
   return (
@@ -48,6 +49,11 @@ function App() {
 
             <Route path="/confirmorders">
               <ConfirmOrder></ConfirmOrder>
+
+            </Route>
+
+            <Route path="/allreviews">
+              <AllReviewList></AllReviewList>
 
             </Route>
 

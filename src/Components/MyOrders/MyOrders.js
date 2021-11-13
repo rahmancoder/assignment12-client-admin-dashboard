@@ -55,12 +55,12 @@ const MyOrders = () => {
     }
     return (
         <div>
-            <h2>Your Orders: {orders.length} </h2>
-            <ul>
+            {/* <h2>Your Orders: {orders.length} </h2> */}
+            {/* <ul>
                 {orders.map(order => <li
                     key={order._id}
                 >{order.OrderName} : {order.email}</li>)}
-            </ul>
+            </ul> */}
 
             <div className="container">
                 <h1 className="text-danger"> Manage ALL Orders Here</h1>
