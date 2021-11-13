@@ -47,12 +47,15 @@ function DashBoard(props) {
             {/* <img className="" src={user?.photo} alt="" /> */}
             <Divider />
             {/* <Link to="/home"><Button color="inherit">Appointment</Button></Link> */}
-            <Link to={`${url}`}><Button color="inherit">Dashboard</Button></Link>
 
-            <Link to={`${url}/pay`}><Button color="inherit">Payment</Button></Link>
-            <Link to={`${url}/myorders`}><Button color="inherit">My Orders</Button></Link>
-            <Link to={`${url}/myreview`}><Button color="inherit">Reviews</Button></Link>
-            <Link to="/login"><Button onClick={logout} color="inherit">Logout</Button></Link>
+
+            <Link className="text-decoration-none" to={`${url}`}><Button variant="contained" color="error">Dashboard</Button></Link><br /><br />
+            <Link className="text-decoration-none mt-2" to="/home"><Button variant="contained" color="error">Home</Button></Link><br />
+
+            {/* <Link to={`${url}/pay`}><Button color="inherit">Payment</Button></Link><br />
+            <Link to={`${url}/myorders`}><Button color="inherit">My Orders</Button></Link><br />
+            <Link to={`${url}/myreview`}><Button color="inherit">Reviews</Button></Link><br /> */}
+            {/* <Link to="/login"><Button onClick={logout} color="inherit">Logout</Button></Link> */}
             {/* <Link to={`${url}/addproducts`}><Button color="inherit">Add a Product</Button></Link> */}
             {admin && <Box>
                 <Link to={`${url}/addproducts`}><Button color="inherit">Add a Product</Button></Link>
@@ -60,7 +63,18 @@ function DashBoard(props) {
                 <Link to={`${url}/manageallproducts`}><Button color="inherit">Manage  all Product</Button></Link>
                 <Link to={`${url}/manageallorders`}><Button color="inherit">Manage  all Orders</Button></Link>
 
-            </Box>}
+            </Box>
+            }
+
+            {!admin &&
+                <Box>
+                    <Link to={`${url}/pay`}><Button color="inherit">Payment</Button></Link><br />
+                    <Link to={`${url}/myorders`}><Button color="inherit">My Orders</Button></Link><br />
+                    <Link to={`${url}/myreview`}><Button color="inherit">Reviews</Button></Link><br />
+                </Box>
+            }
+
+            <Link to="/login"><Button onClick={logout} color="inherit">Logout</Button></Link>
             {/* <Link to={`${url}/makeadmin`}><Button color="inherit">Make Admin</Button></Link>
             <Link to={`${url}/manageallproducts`}><Button color="inherit">Manage  all Product</Button></Link>
             <Link to={`${url}/manageallorders`}><Button color="inherit">Manage  all Orders</Button></Link> */}

@@ -37,18 +37,19 @@ function App() {
               <ExploreProductList></ExploreProductList>
             </Route>
 
-            <Route path="/productorder/:productId">
+            {/* <Route path="/productorder/:productId">
               <SingleProductListInfo></SingleProductListInfo>
-            </Route>
+            </Route> */}
+
+
+            <PrivateRoute path="/productorder/:productId">
+              <SingleProductListInfo></SingleProductListInfo>
+            </PrivateRoute>
 
             <Route path="/confirmorders">
               <ConfirmOrder></ConfirmOrder>
 
             </Route>
-
-            {/* <PrivateRoute path="/productorder/:productId">
-              <SingleProductListInfo></SingleProductListInfo>
-            </PrivateRoute> */}
 
             <Route path="/dashboard">
               <DashBoard></DashBoard>

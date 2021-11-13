@@ -40,7 +40,7 @@ const AddProducts = () => {
                     <input type="submit" />
                 </form>
             </div>
-            <Button className="mx-2" variant="info"> <Link className="m-2 text-decoration-none text-light" to="/admin">AdminDashboard</Link></Button>
+            <Button className="mx-2" variant="info"> <Link className="m-2 text-decoration-none text-light" to="/dashboard">AdminDashboard</Link></Button>
 
 
         </div>

@@ -33,8 +33,8 @@ const MyOrders = () => {
 
 
 
-    // DELETE A Privious My Booking
-    const handleDeleteUser = id => {
+    // DELETE A Privious My Orders
+    const handleDeleteOrder = id => {
         const proceed = window.confirm('Are you sure, you want to delete?');
         if (proceed) {
             const url = `http://localhost:5000/orders/${id}`;
@@ -47,8 +47,8 @@ const MyOrders = () => {
                     // if (data.deletedCount > 0) {
                     if (data.deletedCount) {
                         alert('deleted successfully');
-                        const remainingbooking = myallorders.filter(data => data._id !== id);
-                        setMyallorders(remainingbooking);
+                        const remainingorders = myallorders.filter(data => data._id !== id);
+                        setMyallorders(remainingorders);
                     }
                 });
         }
@@ -73,6 +73,7 @@ const MyOrders = () => {
                             <th>Name</th>
                             <th>Email</th>
                             <th>Description</th>
+                            <th>Status</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -83,9 +84,10 @@ const MyOrders = () => {
                                 <td>{pd?.OrderName}</td>
                                 <td>{pd?.email}</td>
                                 <td>{pd?.description}</td>
+                                <td>{pd?.status}</td>
                                 {/* <button className="btn bg-warning">Delete</button> */}
                                 {/* <button onClick={() => handleDeleteUser(myallorders._id)}>X</button> */}
-                                <button onClick={() => handleDeleteUser(pd?._id)}>X</button>
+                                <button onClick={() => handleDeleteOrder(pd?._id)}>X</button>
                             </tr>
                         </tbody>
                     ))}

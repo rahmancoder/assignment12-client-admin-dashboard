@@ -5,9 +5,9 @@ import useAuth from '../../hooks/useAuth';
 
 const PrivateRoute = ({ children, ...rest }) => {
     // const { user, loading } = useFirebase();
-    const { user, loading } = useAuth();
+    const { user, isLoading } = useAuth();
     // const { user } = useAuth();
-    if (loading) return 'loading';
+    if (isLoading) return 'loading';
     return (
         <Route
             {...rest}

@@ -5,6 +5,8 @@ import { Button, Table } from 'react-bootstrap';
 const ManageAllProduct = () => {
     const [manageallproducts, setManageallproducts] = useState([]);
 
+    const [adminproducts, setAdminproducts] = useState([]);
+
     useEffect(() => {
         fetch("http://localhost:5000/products")
             // fetch("https://frightening-spell-88460.herokuapp.com/booking")
@@ -13,6 +15,29 @@ const ManageAllProduct = () => {
 
 
     }, []);
+
+
+    // DELETE Products
+    const handleDeleteOrder = id => {
+        const proceed = window.confirm('Are you sure, you want to delete?');
+        if (proceed) {
+            const url = `http://localhost:5000/products/${id}`;
+            // const url = `http://localhost:5000/mybooking/${id}`;
+            fetch(url, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    // if (data.deletedCount > 0) {
+                    if (data.deletedCount) {
+                        alert('deleted successfully');
+                        const remainingproducts = adminproducts.filter(data => data._id !== id);
+                        setAdminproducts(remainingproducts);
+                    }
+                });
+        }
+    }
+
 
     return (
         <div className="container">
@@ -34,8 +59,9 @@ const ManageAllProduct = () => {
                             <td>{index}</td>
                             <td>{pd?.product_Name}</td>
                             <td>{pd?.product_description}</td>
-                            <button className="btn bg-warning">Delete</button>
-                            {/* <button onClick={() => handleDeleteUser(myallbooking._id)}>X</button> */}
+                            {/* <button className="btn bg-warning">Delete</button> */}
+                            <td><button className="btn bg-warning" onClick={() => handleDeleteOrder(pd?._id)}>DELETE</button>
+                            </td>
                         </tr>
                     </tbody>
                 ))}

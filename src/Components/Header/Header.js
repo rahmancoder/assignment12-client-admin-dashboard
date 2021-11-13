@@ -11,7 +11,7 @@ const Header = () => {
     const { user, logout } = useAuth();
     return (
         <div>
-            <h1> This is Header</h1>
+            {/* <h1> This is Header</h1> */}
             <Navbar sticky="top" bg="dark" variant="dark">
                 <Container>
                     {/* <img className="img-fluid mt-5 custom-width" src={headerimage} alt="" /> */}
