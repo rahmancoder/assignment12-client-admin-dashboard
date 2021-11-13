@@ -40,7 +40,7 @@ const Login = () => {
 
     return (
         <div>
-            <h1> this is login</h1>
+            <h1 className="bg-info"> Please Login or Register </h1>
             <Container>
                 <Grid container spacing={2}>
                     <Grid item sx={{ mt: 8 }} xs={12} md={6}>

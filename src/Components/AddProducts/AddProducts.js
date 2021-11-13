@@ -35,7 +35,7 @@ const AddProducts = () => {
                     <textarea style={{ height: '10vh' }} {...register("product_description")} placeholder="Product Descripsion" />
                     <input style={{ height: '5vh' }} type="number" {...register("product_cost")} placeholder="Product Cost" />
                     <input style={{ height: '5vh' }} {...register("picture")} placeholder="Product image url" />
-                    <input style={{ height: '5vh' }} type="number"{...register("index")} placeholder="Product image url" defaultValue="20" />
+                    <input style={{ height: '5vh' }} type="number"{...register("index")} placeholder="Product image url" defaultValue="11" />
                     <input style={{ height: '5vh' }} {...register("status")} defaultValue="pending" />
                     <input type="submit" />
                 </form>

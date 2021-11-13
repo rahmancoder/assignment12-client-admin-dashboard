@@ -1,70 +1,103 @@
-# Getting Started with Create React App
+# BD-Drone Custom (Website-Name)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Github Client Side Code Link:https://github.com/programming-hero-web-course-4/niche-website-client-side-rahmancoder
+## Github Server Side Code Link:https://github.com/programming-hero-web-course-4/niche-website-server-side-rahmancoder
 
-## Available Scripts
+## Server Live link (Heroku): https://sheltered-shelf-37326.herokuapp.com/
+## Website Live Link (Firebase): https://mustafiz-drone-website.web.app/
 
-In the project directory, you can run:
+# About Website?
+* BD-Drone Custom server drone products where is one of the biggest sector of Bangladesh Economy. SO we should try to focus whatever we can Do make it better with a better plan.
+* Giving Online Products like drone and DJI Information through this website
+* People can Make the best use of the Drone Products and get a chance to give his feedback through writing product reviews 
+* The Best Drone Community and drone products can be added By Admin, and this Drone Products Information will be saved automatically in the server and update our website.
+* Great Drone Products Community inside and Outside of the COuntry
+* Opportunity to work with new peoples and new Admin and users 
+* Drone flyzone and users Guide 
+* Add Products, Manage Orders, Manage Products, MakeAdmin by Admin
+* Users can Pay, See his orders , delete his/her orders, and can give reviews
 
-### `npm start`
+## About the Website?
+# Used Frameworks and Libraries
+* Framework and Library Used
+* React-Router-Dom (Version-5.3.0)
+* React-Bootstrap
+* React-hook-form
+* Material-UI
+* Material-UI Icons
+* Firebase integration
+* Heroku Server handling
+* MongoDB Atlas For database Integration (express,cors,dotenv,nodemon)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## ALL Components (26 Components)
+1. AddProducts
+2. AddReviews
+3. AdminRoute
+4. AllReviewList
+5. Banner
+6. ConfirmOrder
+7. DashBoard
+8. DashBoardHome
+9. ExploreProductList
+10. FAQ
+11. Footer
+12. Header
+13. Home
+14. Login
+15. MakeAdmin
+16. ManageAllProduct
+17. ManageAllOrders
+18. MyOrders
+19. NotFound
+20. Payment
+21. PrivateRoute
+22. ProductList
+23. Register
+24. SingleProductList
+25. SingleProductListInfo
+26. SingleReviewList
 
-### `npm test`
+## Application Router
+## All Routers Used 
+* / == (root,home)
+* /home
+* /products
+* /products/:productsId (dynamic route)
+* /allproducts
+* /questions
+* /login
+* /register
+* /orders
+* /dashboard
+* /allreviews
+* Nested Routes ----
+---------
+* /pay
+* /myorders
+* /myreview
+* /addproducts
+* /makeadmin
+* /manageallproducts
+* /manageallorders
+* /* Not Found
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## MONGODB Database Collection
+1. products
+2. users
+3. orders
+4. reviews
 
-### `npm run build`
+## Functionality Description
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Deployment 
+## Heroku
+*  Deploument Server link in Heroku
+*  https://sheltered-shelf-37326.herokuapp.com/
+*   1. Steps install Heroku CLI 
+*   2. heroku login
+*   3. heroku create
+ -------------------------------
+*  For continuos integrate and deployment in Heroky CLI
+*   4. git push heroku main
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
